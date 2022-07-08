@@ -1,0 +1,250 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.root{
+    --bg1 :#9b59b6;
+    --bg2 :#3498db;
+    --bg  :#D7E1EC;
+}
+
+
+body, html{
+    background-color:#231e39;
+    justify-content:center ;
+    display: flex;  
+    user-select: none;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    color: #b3b8cd;
+    
+  }
+
+.avatar-card{
+    width: 117px;
+    margin-top: 0px;
+}
+
+.card{
+  box-sizing: border-box;
+    display: block;
+    width: 490px;
+    height:620px;
+    /* padding-top: 1px; */
+    /* padding-bottom: 400px; */
+    margin: 50px;
+    margin-top: 140px;
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: #1f1a32;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
+}
+
+
+
+.card-img{
+    width: 125px;
+    height: 125px;
+    border: 4px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: #fff;
+    margin: 0 auto;
+    margin-top: 25px;
+    
+    
+}
+
+.about-card {
+  font-size: 20px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  display: block;
+}
+
+.name-card {
+  padding: 20px;
+  font-size: 27px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+
+.contact {
+  font-size: 20px;
+  padding-top: 1px;
+  display: block;
+  margin-bottom: 1px;
+  
+}
+
+ ul {
+   position: absolute;
+   display: flex;
+   transform: rotate(0deg) skew(0deg);
+   transform-style: preserve-3d;
+   padding-left: 55px;
+   margin-right: 20px; 
+   margin-bottom: 10px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 57px;
+  height: 57px;
+  margin: 100px 20px;
+}
+
+ul li:before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: #231e39;
+  transform-origin: top;
+  transform: skewX(-41deg);
+}
+
+ul li:after{
+  content: '';
+  position: absolute;
+  top:5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: #231e39;
+  transform-origin: right;
+  transform: skewY(-49deg);
+}
+
+ul li span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  background: #231e39;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px !important;
+  transition: 1.5s ease-out;
+}
+
+ul li:hover span {
+  z-index: 1000;
+  transition: .3s;
+  color: #fff;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+ul li:hover span:nth-child(5){
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+ul li:hover span:nth-child(4){
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+
+ul li:hover span:nth-child(3){
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+
+ul li:hover span:nth-child(2){
+  transform: translate(10px, -10px);
+  opacity: .4;
+}
+
+ul li:hover span:nth-child(1){
+  transform: translate(0px, 0px);
+  opacity: .2;
+}
+
+ul li:nth-child(1):hover span{
+  background: #0f3dd2 !important;
+}
+
+ul li:nth-child(2):hover span{
+  background: #2C3456 !important;
+}
+
+ul li:nth-child(3):hover span{
+  background: #EA6E96 !important;
+}
+
+ul li:nth-child(4):hover span{
+  background: #fc0303 !important;
+}
+
+
+
+/* .bn29 {
+  border: none;
+  padding: 0.9em 2.5em;
+  margin-left: 45px;
+  margin-right: 40px;
+  margin-bottom: 1px;
+  padding-bottom: 10px;
+  outline: none;
+  color: white;
+  font-style: 1.2em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.bn29:before, .bn29:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
+  content: "";
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+
+.bn29:before {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-animation: pulse 10s infinite ease;
+  animation: pulse 10s infinite ease;
+}
+
+.bn29:after {
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+}
+
+.bn29:hover:before {
+  width: 115%;
+  height: 115%;
+} */
